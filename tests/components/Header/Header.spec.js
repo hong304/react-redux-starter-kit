@@ -12,7 +12,7 @@ describe('(Component) Header', () => {
 
   it('Renders a welcome message', () => {
     const welcome = _wrapper.find('h1')
-    expect(welcome).to.exist
+    expect(welcome).to.exist()
     expect(welcome.text()).to.match(/React Redux Starter Kit/)
   })
 
@@ -22,7 +22,7 @@ describe('(Component) Header', () => {
         <IndexLink activeClassName='route--active' to='/'>
           Home
         </IndexLink>
-      )).to.be.true
+      )).to.be.true()
     })
 
     it('Should render a Link to Counter route', () => {
@@ -30,7 +30,7 @@ describe('(Component) Header', () => {
         <Link activeClassName='route--active' to='/counter'>
           Counter
         </Link>
-      )).to.be.true
+      )).to.be.true()
     })
   })
 })
